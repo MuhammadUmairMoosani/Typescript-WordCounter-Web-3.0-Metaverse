@@ -1,0 +1,19 @@
+import inquirer from 'inquirer';
+import chalk from 'chalk';
+
+const paragraph: {
+    paragraphText: string
+} = await inquirer.prompt(
+    {
+        name:"paragraphText",
+        message:"Please type paragraph"
+    }
+)
+
+const { paragraphText } = paragraph;
+
+if(paragraphText) {
+    console.log(chalk.green(`Type paragraph total work is ${paragraphText.replace(/ /g,"").length}`))
+} else {
+    console.log(chalk.red("Something when wrong!"))
+}
