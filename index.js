@@ -6,7 +6,7 @@ const paragraph = await inquirer.prompt({
 });
 const { paragraphText } = paragraph;
 if (paragraphText) {
-    console.log(chalk.green(`Type paragraph total work is ${paragraphText.replace(/ /g, "").length}`));
+    console.log(chalk.green(`Type paragraph total work is ${paragraphText.split(" ").length}`));
 }
 else {
     console.log(chalk.red("Something when wrong!"));
